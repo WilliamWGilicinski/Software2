@@ -1,0 +1,16 @@
+PROGRAM Test IS
+
+  INSTRUCTION one IS
+     move
+     move
+     WHILE next-is-empty DO
+        move
+     END WHILE
+  END one
+
+BEGIN
+  WHILE true DO
+    two
+    one
+  END WHILE
+END Test
