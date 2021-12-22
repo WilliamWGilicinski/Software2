@@ -1,0 +1,37 @@
+PROGRAM Test IS
+
+INSTRUCTION one IS
+     move
+     turnleft
+  END notone
+  
+  INSTRUCTION two IS
+    one
+    IF next-is-not-empty THEN
+      turnleft
+    ELSE
+      one
+      one
+    END IF
+  END two
+  
+  INSTRUCTION three IS
+    IF next-is-enemy THEN
+        one
+    ELSE
+        two
+    END IF
+  END three
+
+BEGIN
+  infect
+  WHILE true DO
+    two
+    IF next-is-empty THEN
+      move
+    END IF
+    three
+    two
+    one
+  END WHILE
+END Test

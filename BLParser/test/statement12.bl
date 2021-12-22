@@ -1,0 +1,22 @@
+IF not-valid-condition THEN
+    infect
+    move
+    turn-right
+    IF next-is-wall THEN
+        skip
+    END IF
+END IF
+WHILE true DO
+  move
+  IF next-is-not-enemy THEN
+  END IF
+  IF random THEN
+    turnleft
+    infect
+  ELSE
+    go-for-it
+    turnright
+    look-for-something
+  END IF
+  skip
+END WHILE

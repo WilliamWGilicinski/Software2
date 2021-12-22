@@ -1,0 +1,8 @@
+IF next-is-enemy THEN
+    infect
+    move
+    turn-right
+    IF next-is-wall THEN
+        skip
+    END IF
+END IF

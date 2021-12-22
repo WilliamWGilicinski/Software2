@@ -1,0 +1,42 @@
+PROGRAM BugBrain IS
+    
+    INSTRUCTION AppropriateAction IS
+        IF next-is-enemy THEN
+            infect
+        ELSE
+            IF next-is-wall THEN
+            IF random THEN
+            turnright
+            END IF
+            ELSE 
+                skip
+            END IF
+        END IF
+    END AppropriateAction
+
+    INSTRUCTION CheckSourroundings IS
+        AppropriateAction
+        turnright
+        AppropriateAction
+        turnright
+        AppropriateAction
+        turnright
+        AppropriateAction
+        turnright
+    END CheckSourroundings
+
+
+
+
+    BEGIN
+        WHILE true DO
+            CheckSourroundings
+            move
+            IF random THEN
+            turnleft
+            END IF
+        END WHILE
+END BugBrain
+    
+            
+        
